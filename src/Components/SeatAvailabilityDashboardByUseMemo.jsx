@@ -17,7 +17,6 @@ const SeatAvailabilityDashboardByUseMemo = () => {
   const [section, setSection] = useState("");
   const [theme, setTheme] = useState("light"); 
 
-    
     const availableSeats =useMemo(() => {
     console.log("Calculating available seats...");
 
@@ -30,7 +29,6 @@ const SeatAvailabilityDashboardByUseMemo = () => {
         seats.push(i);
       }
     }
-
     return seats;
   },[section]);  
 
@@ -39,12 +37,12 @@ const SeatAvailabilityDashboardByUseMemo = () => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center"
-      }} >
+      }}>
         
       <h2>🎟️ Movie  Seat Booking</h2>
 
       <div>
-      <label>Select Section: </label>
+      <label>Select Section:</label>
       <select value={section}onChange={(e) => setSection(e.target.value)}>
         <option>Select Seat Type</option>
         <option value="Silver">Silver</option>
@@ -78,6 +76,7 @@ const SeatAvailabilityDashboardByUseMemo = () => {
           </div>
         ))}
       </div>
+    <hr></hr>
     </div>
   );
 };
